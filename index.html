@@ -96,13 +96,13 @@
             border-radius: 2px;
         }
 
-        .user-profile {
+        .perfil-usuario {
             display: flex;
             align-items: center;
             gap: 1rem;
         }
 
-        .search-btn, .profile-btn, .theme-toggle {
+        .pesquisa-btn, .perfil-btn, .troca-tema {
             background: rgba(255, 255, 255, 0.1);
             border: none;
             color: white;
@@ -113,25 +113,22 @@
             font-size: 1rem;
         }
 
-        body.light-mode .search-btn, 
-        body.light-mode .profile-btn, 
-        body.light-mode .theme-toggle {
+        body.light-mode .pesquisa-btn, 
+        body.light-mode .perfil-btn, 
+        body.light-mode .troca-tema {
             background: rgba(0, 0, 0, 0.1);
             color: #1a202c;
         }
 
-        .search-btn:hover, .profile-btn:hover, .theme-toggle:hover {
-            background: rgba(147, 51, 234, 0.3);
-            transform: scale(1.1);
-        }
+
 
         /* Botão de tema com animação */
-        .theme-toggle {
+        .troca-tema {
             position: relative;
             overflow: hidden;
         }
 
-        .theme-toggle::before {
+        .troca-tema::before {
             content: '';
             position: absolute;
             top: 0;
@@ -144,17 +141,17 @@
             transition: transform 0.3s ease;
         }
 
-        .theme-toggle:hover::before {
+        .troca-tema:hover::before {
             transform: scale(1);
         }
 
-        .theme-toggle span {
+        .troca-tema span {
             position: relative;
             z-index: 1;
         }
 
         /* Secção do Herói */
-        .hero-section {
+        .seccao-heroi {
             margin-top: 80px;
             height: 80vh;
             position: relative;
@@ -166,47 +163,47 @@
             transition: all 0.3s ease;
         }
 
-        body.light-mode .hero-section {
+        body.light-mode .seccao-heroi {
             background: linear-gradient(135deg, rgba(147, 51, 234, 0.05), rgba(168, 85, 247, 0.05));
         }
 
-        .hero-content {
+        .conteudo-heroi {
             max-width: 600px;
             z-index: 2;
         }
 
-        .hero-title {
+        .titulo-heroi {
             font-size: 3.5rem;
             font-weight: bold;
             margin-bottom: 1rem;
-            background: linear-gradient(45deg, #ffffff, #c084fc);
+            background: #ffffff;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            text-shadow: 0 0 30px rgba(147, 51, 234, 0.5);
+            /* text-shadow: 0 0 30px rgba(147, 51, 234, 0.5); */
         }
 
-        body.light-mode .hero-title {
+        body.light-mode .titulo-heroi {
             background: linear-gradient(45deg, #1a202c, #9333ea);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
 
-        .hero-description {
+        .descricao-heroi{
             font-size: 1.2rem;
             margin-bottom: 2rem;
             opacity: 0.9;
             line-height: 1.6;
         }
 
-        .hero-buttons {
+        .botoes-heroi {
             display: flex;
             gap: 1rem;
             flex-wrap: wrap;
         }
 
-        .btn-primary, .btn-secondary {
+        .primario-btn, .secundario-btn {
             padding: 1rem 2rem;
             border: none;
             border-radius: 8px;
@@ -217,39 +214,39 @@
             display: inline-block;
         }
 
-        .btn-primary {
+        .primario-btn {
             background: linear-gradient(45deg, #9333ea, #c084fc);
             color: white;
         }
 
-        .btn-primary:hover {
+        .primario-btn:hover {
             transform: translateY(-3px);
             box-shadow: 0 10px 30px rgba(147, 51, 234, 0.4);
         }
 
-        .btn-secondary {
+        .secundario-btn {
             background: rgba(255, 255, 255, 0.1);
             color: white;
             border: 1px solid rgba(255, 255, 255, 0.3);
         }
 
-        body.light-mode .btn-secondary {
+        body.light-mode .secundario-btn {
             background: rgba(0, 0, 0, 0.1);
             color: #1a202c;
             border: 1px solid rgba(0, 0, 0, 0.3);
         }
 
-        .btn-secondary:hover {
+        .secundario-btn:hover {
             background: rgba(255, 255, 255, 0.2);
             transform: translateY(-2px);
         }
 
-        body.light-mode .btn-secondary:hover {
+        body.light-mode .secundario-btn:hover {
             background: rgba(0, 0, 0, 0.2);
         }
 
         /*Imagem do Anime*/
-        .hero-image {
+        .imagem-heroi {
             position: absolute;
             right: -100px;
             top: 50%;
@@ -260,17 +257,14 @@
             background-image: url('./templates/Cada-temporada-de-Hunter-X-Hunter-classificada.jpg')
         }
 
-        @keyframes float {
-            0%, 100% { transform: translateY(-50%) rotate(0deg); }
-            50% { transform: translateY(-60%) rotate(5deg); }
-        }
+            
 
         /* Secção de conteúdo */
-        .content-section {
+        .seccao-conteudo {
             padding: 4rem 2rem 2rem;
         }
 
-        .section-title {
+        .seccao-titulo {
             font-size: 2rem;
             margin-bottom: 2rem;
             color: white;
@@ -278,18 +272,18 @@
             transition: color 0.3s ease;
         }
 
-        body.light-mode .section-title {
+        body.light-mode .seccao-titulo {
             color: #1a202c;
         }
 
-        .content-grid {
+        .conteudo-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 1.5rem;
             margin-bottom: 3rem;
         }
 
-        .content-card {
+        .carta-coteudo {
             background: rgba(255, 255, 255, 0.05);
             border-radius: 12px;
             overflow: hidden;
@@ -298,19 +292,14 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        body.light-mode .content-card {
+        body.light-mode .carta-coteudo {
             background: rgba(0, 0, 0, 0.05);
             border: 1px solid rgba(0, 0, 0, 0.1);
         }
 
-        .content-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(147, 51, 234, 0.3);
-            border-color: rgba(147, 51, 234, 0.5);
-        }
 
         /*Imagem das cartas*/
-        .card-image1 {
+        .carta-imagem1 {
             width: 100%;
             height: 280px;
             background: linear-gradient(45deg, #9333ea, #c084fc, #60a5fa);
@@ -324,7 +313,7 @@
             background-image: url('./templates/20120876.webp')
         }
 
-        .card-image2 {
+        .carta-imagem2 {
             width: 100%;
             height: 280px;
             background: linear-gradient(45deg, #9333ea, #c084fc, #60a5fa);
@@ -338,7 +327,7 @@
             background-image: url('./templates/20083748.jpg')
         }
 
-        .card-image3 {
+        .carta-imagem3 {
             width: 100%;
             height: 280px;
             background: linear-gradient(45deg, #9333ea, #c084fc, #60a5fa);
@@ -352,7 +341,7 @@
             background-image: url('./templates/2904073.jpg')
         }
     
-        .card-image4 {
+        .carta-imagem4 {
             width: 100%;
             height: 280px;
             background: linear-gradient(45deg, #9333ea, #c084fc, #60a5fa);
@@ -366,23 +355,23 @@
             background-image: url('./templates/19874092.webp')
         }
 
-        .card-content {
+        .carta-coteudo {
             padding: 1.5rem;
         }
 
-        .card-title {
+        .carta-titulo {
             font-size: 1.1rem;
             font-weight: 600;
             margin-bottom: 0.5rem;
         }
 
-        .card-description {
+        .carta-descricao {
             font-size: 0.9rem;
             opacity: 0.7;
             line-height: 1.4;
         }
 
-        .card-rating {
+        .carta-avalicao{
             display: flex;
             align-items: center;
             gap: 0.5rem;
@@ -390,29 +379,29 @@
             font-size: 0.9rem;
         }
 
-        .rating-stars {
+        .avalicao-estrelas {
             color: #fbbf24;
         }
 
         /* Categories - Diferentes temas*/
-        .categories-section {
+        .categorias-seccao {
             padding: 2rem;
             background: rgba(255, 255, 255, 0.02);
             transition: background 0.3s ease;
         }
 
-        body.light-mode .categories-section {
+        body.light-mode .categorias-seccao {
             background: rgba(0, 0, 0, 0.02);
         }
 
-        .categories-grid {
+        .categorias-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             gap: 1rem;
             margin-top: 2rem;
         }
 
-        .category-card {
+        .categorias-cartao {
             background: rgba(255, 255, 255, 0.05);
             padding: 2rem 1rem;
             border-radius: 12px;
@@ -422,23 +411,18 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        body.light-mode .category-card {
+        body.light-mode .categorias-cartao {
             background: rgba(0, 0, 0, 0.05);
             border: 1px solid rgba(0, 0, 0, 0.1);
         }
 
-        .category-card:hover {
-            background: rgba(147, 51, 234, 0.2);
-            transform: translateY(-5px);
-            border-color: rgba(147, 51, 234, 0.5);
-        }
 
-        .category-icon {
+        .categorias-icon {
             font-size: 2.5rem;
             margin-bottom: 1rem;
         }
 
-        .category-name {
+        .categorias-nome {
             font-size: 1.1rem;
             font-weight: 600;
         }
@@ -457,41 +441,41 @@
             border-top: 1px solid rgba(0, 0, 0, 0.1);
         }
 
-        .footer-content {
+        .footer-conteudo {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 2rem;
             margin-bottom: 2rem;
         }
 
-        .footer-section h3 {
+        .footer-seccao h3 {
             margin-bottom: 1rem;
             color: #c084fc;
         }
 
-        .footer-section ul {
+        .footer-seccao ul {
             list-style: none;
         }
 
-        .footer-section ul li {
+        .footer-seccao ul li {
             margin-bottom: 0.5rem;
         }
 
-        .footer-section ul li a {
+        .footer-seccao ul li a {
             color: rgba(255, 255, 255, 0.7);
             text-decoration: none;
             transition: color 0.3s ease;
         }
 
-        body.light-mode .footer-section ul li a {
+        body.light-mode .footer-seccao ul li a {
             color: rgba(26, 32, 44, 0.7);
         }
 
-        .footer-section ul li a:hover {
+        .footer-seccao ul li a:hover {
             color: #c084fc;
         }
 
-        .footer-bottom {
+        .footer-botao{
             text-align: center;
             padding-top: 2rem;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -499,7 +483,7 @@
             transition: all 0.3s ease;
         }
 
-        body.light-mode .footer-bottom {
+        body.light-mode .footer-botao {
             border-top: 1px solid rgba(0, 0, 0, 0.1);
             color: rgba(26, 32, 44, 0.5);
         }
@@ -514,19 +498,19 @@
                 display: none;
             }
             
-            .hero-title {
+            .titulo-heroi {
                 font-size: 2.5rem;
             }
             
-            .hero-image {
+            .imagem-heroi {
                 display: none;
             }
             
-            .content-grid {
+            .conteudo-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
             
-            .categories-grid {
+            .categorias-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
@@ -546,7 +530,7 @@
         }
 
         /* Notificação de tema */
-        .theme-notification {
+        .notificacao-tema {
             position: fixed;
             top: 100px;
             right: 20px;
@@ -560,7 +544,7 @@
             font-size: 0.9rem;
         }
 
-        .theme-notification.show {
+        .notificacao-tema.show {
             transform: translateX(0);
         }
 
@@ -573,86 +557,86 @@
         <nav>
             <ul class="nav-menu">
                 <li><a href="#" class="active">Início</a></li>
-                <li><a href="#">Séries</a></li>
                 <li><a href="#">Filmes</a></li>
-                <li><a href="#">Originais</a></li>
+                <li><a href="#">Series de TV</a></li>
+                <li><a href="#">Marcas</a></li>
                 <li><a href="#">Esportes</a></li>
             </ul>
         </nav>
         <!--Usuário lado direito-->
-        <div class="user-profile">
-            <button class="search-btn">🔍</button>
-            <button class="theme-toggle" id="themeToggle">
-                <span id="themeIcon">🌙</span>
+        <div class="perfil-usuario">
+            <button class="pesquisa-btn">🔍</button>
+            <button class="troca-tema" id="trocaTema">
+                <span id="iconeTema">🌙</span>
             </button>
-            <button class="profile-btn">🧑</button>
+            <button class="perfil-btn">🧑</button>
         </div>
     </header>
 
     <!-- Notificação de tema -->
-    <div class="theme-notification" id="themeNotification">
-        <span id="themeMessage">Modo escuro ativado</span>
+    <div class="notificacao-tema" id="temaNotificacao">
+        <span id="MensagemTema">Modo escuro ativado</span>
     </div>
 
     <!-- Secção do Herói em destaque -->
-    <section class="hero-section">
-        <div class="hero-content">
-            <h1 class="hero-title">Hunter x Hunter</h1>
-            <p class="hero-description">
+    <section class="seccao-heroi">
+        <div class="conteudo-heroi">
+            <h1 class="titulo-heroi">Hunter x Hunter</h1>
+            <p class="descricao-heroi">
                 segue a história de Gon Freecss, um jovem que descobre que seu pai, Ging, é um lendário "Hunter", um caçador de tesouros, locais exóticos e criaturas misteriosas
             </p>
-            <div class="hero-buttons">
-                <button class="btn-primary"><a href="player.html">▶️ Assistir Agora</a></button>
-                <button class="btn-secondary">➕ Minha Lista</button>
+            <div class="botoes-heroi">
+                <button class="primario-btn"><a href="player.html">▶ Assistir Agora</a></button>
+                <button class="secundario-btn">+ Minha Lista</button>
             </div>
         </div>
-        <div class="hero-image"></div>
+        <div class="imagem-heroi"></div>
     </section>
 
     <!-- Melhores Avaliações -->
-    <section class="content-section">
-        <h2 class="section-title">Em Destaque</h2>
-        <div class="content-grid">
-            <div class="content-card fade-in">
-                <div class="card-image1" ></div>
-                <div class="card-content">
-                    <h3 class="card-title">O Poderoso Chefão</h3>
-                    <p class="card-description">Don Vito Corleone (Marlon Brando) é o chefe de uma "família" de Nova York que está feliz, pois Connie (Talia Shire), sua filha, se casou com Carlo (Gianni Russo). Porém, durante a festa, Bonasera (Salvatore Corsitto) é visto no escritório de Don Corleone pedindo "justiça", vingança na verdade contra membros de uma quadrilha, que espancaram ...</p>
-                    <div class="card-rating">
-                        <span class="rating-stars">⭐⭐⭐⭐⭐</span>
+    <section class="seccao-conteudo">
+        <h2 class="seccao-titulo">Em Destaque</h2>
+        <div class="conteudo-grid">
+            <div class="conteudo-carta fade in">
+                <div class="carta-imagem1"></div>
+                <div class="carta-coteudo">
+                    <h3 class="carta-titulo">O Poderoso Chefão</h3>
+                    <p class="carta-descricao">Don Vito Corleone (Marlon Brando) é o chefe de uma "família" de Nova York que está feliz, pois Connie (Talia Shire), sua filha, se casou com Carlo (Gianni Russo). Porém, durante a festa, Bonasera (Salvatore Corsitto) é visto no escritório de Don Corleone pedindo "justiça", vingança na verdade contra membros de uma quadrilha, que espancaram ...</p>
+                    <div class="carta-avalicao">
+                        <span class="avalicao-estrelas">⭐⭐⭐⭐⭐</span>
                         <span>9.5</span>
                     </div>
                 </div>
             </div>
-            <div class="content-card fade-in">
-                <div class="card-image2"></div>
-                <div class="card-content">
-                    <h3 class="card-title">Um Sonho de Liberdade</h3>
-                    <p class="card-description">Em 1946, Andy Dufresne (Tim Robbins), um jovem e bem sucedido banqueiro, tem a sua vida radicalmente modificada ao ser condenado por um crime que nunca cometeu, o homicídio de sua esposa e do amante dela. Ele é mandado para uma prisão que é o pesadelo de qualquer detento, a Penitenciária Estadual de Shawshank, no Maine. Lá ele irá cumprir a ...</p>
-                    <div class="card-rating">
-                        <span class="rating-stars">⭐⭐⭐⭐</span>
+            <div class="conteudo-carta fade in">
+                <div class="carta-imagem2"></div>
+                <div class="carta-coteudo">
+                    <h3 class="carta-titulo">Um Sonho de Liberdade</h3>
+                    <p class="carta-descricao">Em 1946, Andy Dufresne (Tim Robbins), um jovem e bem sucedido banqueiro, tem a sua vida radicalmente modificada ao ser condenado por um crime que nunca cometeu, o homicídio de sua esposa e do amante dela. Ele é mandado para uma prisão que é o pesadelo de qualquer detento, a Penitenciária Estadual de Shawshank, no Maine. Lá ele irá cumprir a ...</p>
+                    <div class="carta-avalicao">
+                        <span class="avalicao-estrelas">⭐⭐⭐⭐</span>
                         <span>8.8</span>
                     </div>
                 </div>
             </div>
-            <div class="content-card fade-in">
-                <div class="card-image3"></div>
-                <div class="card-content">
-                    <h3 class="card-title">A Lista de Schindler</h3>
-                    <p class="card-description">A inusitada história de Oskar Schindler (Liam Neeson), um sujeito oportunista, sedutor, "armador", simpático, comerciante no mercado negro, mas, acima de tudo, um homem que se relacionava muito bem com o regime nazista, tanto que era membro do próprio Partido Nazista (o que não o impediu de ser preso algumas vezes, mas sempre o libertavam ...</p>
-                    <div class="card-rating">
-                        <span class="rating-stars">⭐⭐⭐⭐⭐</span>
+            <div class="conteudo-carta fade in">
+                <div class="carta-imagem3"></div>
+                <div class="carta-coteudo">
+                    <h3 class="carta-titulo">A Lista de Schindler</h3>
+                    <p class="carta-descricao">A inusitada história de Oskar Schindler (Liam Neeson), um sujeito oportunista, sedutor, "armador", simpático, comerciante no mercado negro, mas, acima de tudo, um homem que se relacionava muito bem com o regime nazista, tanto que era membro do próprio Partido Nazista (o que não o impediu de ser preso algumas vezes, mas sempre o libertavam ...</p>
+                    <div class="carta-avalicao">
+                        <span class="avalicao-estrelas">⭐⭐⭐⭐⭐</span>
                         <span>9.4</span>
                     </div>
                 </div>
             </div>
-            <div class="content-card fade-in">
-                <div class="card-image4"></div>
-                <div class="card-content">
-                    <h3 class="card-title">Forrest Gump - O Contador de Histórias</h3>
-                    <p class="card-description">Quarenta anos da história dos Estados Unidos, vistos pelos olhos de Forrest Gump (Tom Hanks), um rapaz com QI abaixo da média e boas intenções. Por obra do acaso, ele consegue participar de momentos cruciais, como a Guerra do Vietnã e Watergate, mas continua pensando no seu amor de infância, Jenny Curran.</p>
-                    <div class="card-rating">
-                        <span class="rating-stars">⭐⭐⭐⭐</span>
+            <div class="conteudo-carta fade in">
+                <div class="carta-imagem4"></div>
+                <div class="carta-coteudo">
+                    <h3 class="carta-titulo">Forrest Gump - O Contador de Histórias</h3>
+                    <p class="carta-descricao">Quarenta anos da história dos Estados Unidos, vistos pelos olhos de Forrest Gump (Tom Hanks), um rapaz com QI abaixo da média e boas intenções. Por obra do acaso, ele consegue participar de momentos cruciais, como a Guerra do Vietnã e Watergate, mas continua pensando no seu amor de infância, Jenny Curran.</p>
+                    <div class="carta-avalicao">
+                        <span class="avalicao-estrelas">⭐⭐⭐⭐</span>
                         <span>8.7</span>
                     </div>
                 </div>
@@ -662,36 +646,36 @@
     </section>
 
     <!-- Categorias divididas -->
-    <section class="categories-section">
-        <h2 class="section-title">Explorar por Categoria</h2>
-        <div class="categories-grid">
-            <div class="category-card">
-                <div class="category-icon">🎬</div>
-                <div class="category-name">Ação</div>
+    <section class="categorias-seccao">
+        <h2 class="seccao-tituloection-title">Explorar por Categoria</h2>
+        <div class="categorias-grid">
+            <div class="categorias-cartao">
+                <div class="categorias-icon">⚔</div>
+                <div class="categorias-nome">Ação</div>
             </div>
-            <div class="category-card">
-                <div class="category-icon">😂</div>
-                <div class="category-name">Comédia</div>
+            <div class="categorias-cartao">
+                <div class="categorias-icon">😂</div>
+                <div class="categorias-nome">Comédia</div>
             </div>
-           <div class="category-card">
-                <div class="category-icon">🎭</div>
-                <div class="category-name">Drama</div>
+           <div class="categorias-cartao">
+                <div class="categorias-icon">🥺</div>
+                <div class="categorias-nome">Drama</div>
             </div>
-            <div class="category-card">
-                <div class="category-icon">🧒</div>
-                <div class="category-name">Infantil</div>
+            <div class="categorias-cartao">
+                <div class="categorias-icon">🧒</div>
+                <div class="categorias-nome">Infantil</div>
             </div>
-            <div class="category-card">
-                <div class="category-icon">📚</div>
-                <div class="category-name">Documentários</div>
+            <div class="categorias-cartao">
+                <div class="categorias-icon">🗎</div>
+                <div class="categorias-nome">Documentários</div>
             </div>
         </div>
     </section>
 
     <!-- Footer - Rodapé-->
     <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
+        <div class="footer-conteudo">
+            <div class="footer-seccao">
                 <h3>HBO Max</h3>
                 <ul>
                     <li><a href="#">Sobre</a></li>
@@ -699,7 +683,7 @@
                     <li><a href="#">Blog</a></li>
                 </ul>
             </div>
-            <div class="footer-section">
+            <div class="footer-seccao">
                 <h3>Ajuda</h3>
                 <ul>
                     <li><a href="#">Central de Ajuda</a></li>
@@ -707,7 +691,7 @@
                     <li><a href="#">Acessibilidade</a></li>
                 </ul>
             </div>
-            <div class="footer-section">
+            <div class="footer-seccao">
                 <h3>Descrição</h3>
                 <ul>
                     <li><a href="#">Termos de Uso</a></li>
@@ -717,17 +701,17 @@
                 </ul>
             </div>
         </div>
-        <div class="footer-bottom">
+        <div class="footer-botao">
             <p>&copy; 2025 HBO Maxi. Todos os direitos reservados.</p>
         </div>
     </footer>
 
     <script>
         // Funcionalidade do modo escuro/claro
-        const themeToggle = document.getElementById('themeToggle');
-        const themeIcon = document.getElementById('themeIcon');
-        const themeNotification = document.getElementById('themeNotification');
-        const themeMessage = document.getElementById('themeMessage');
+        const themeToggle = document.getElementById('trocaTema');
+        const themeIcon = document.getElementById('iconeTema');
+        const themeNotification = document.getElementById('temaNotificacao');
+        const themeMessage = document.getElementById('MensagemTema');
         const body = document.body;
 
         // Verificar  tema salvo
@@ -785,12 +769,12 @@
         }, observerOptions);
 
         // Ver todos os cards
-        document.querySelectorAll('.content-card').forEach(card => {
+        document.querySelectorAll('.carta-coteudo').forEach(card => {
             observer.observe(card);
         });
 
         // Efeito hover card categoria
-        document.querySelectorAll('.category-card').forEach(card => {
+        document.querySelectorAll('.categorias-cartao').forEach(card => {
             card.addEventListener('mouseenter', () => {
                 card.style.transform = 'translateY(-5px) scale(1.05)';
             });
@@ -819,3 +803,6 @@
 
 </body>
 </html>
+
+<!-- Icones tirados do https://symbl.cc/-->
+<!--ideaia do projeto vem da página HBOmax-->
